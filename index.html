@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calorie Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calorie & Macro Calculator</h1>
+    <form id="calorieForm">
+      <label>Gender:</label>
+      <select id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+
+      <label>Age:</label>
+      <input type="number" id="age" value="25">
+
+      <label>Height (cm):</label>
+      <input type="number" id="height" value="168">
+
+      <label>Weight (kg):</label>
+      <input type="number" id="weight" value="81">
+
+      <label>Activity Level:</label>
+      <select id="activity">
+        <option value="1.2">Sedentary</option>
+        <option value="1.375">Lightly Active (1–3x/week)</option>
+        <option value="1.55" selected>Moderately Active (3–5x/week)</option>
+        <option value="1.725">Very Active (6–7x/week)</option>
+        <option value="1.9">Extra Active (intense)</option>
+      </select>
+
+      <label>Goal:</label>
+      <select id="goal">
+        <option value="fatloss" selected>Fat Loss</option>
+        <option value="maintenance">Maintenance</option>
+        <option value="gain">Muscle Gain</option>
+      </select>
+
+      <button type="button" onclick="calculateCalories()">Calculate</button>
+    </form>
+
+    <div id="results" class="results"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
